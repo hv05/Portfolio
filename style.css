@@ -1,0 +1,302 @@
+/* =========================================
+   COLORS - change these to restyle the site
+   ========================================= */
+:root {
+  --background: #ffffff;
+  --text: #1a1a1a;
+  --muted-text: #555555;
+  --border: #dddddd;
+  --box-background: #f7f7f7;
+  --accent: #2563eb;      /* main color for links and buttons */
+}
+
+/* Dark mode colors (used when the Dark button is clicked) */
+body.dark {
+  --background: #161616;
+  --text: #eeeeee;
+  --muted-text: #aaaaaa;
+  --border: #333333;
+  --box-background: #212121;
+  --accent: #6ea0ff;
+}
+
+/* =========================================
+   GENERAL
+   ========================================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;   /* keeps headings visible below the menu */
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+h1 {
+  font-size: 34px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+
+.muted {
+  color: var(--muted-text);
+}
+
+/* =========================================
+   LAYOUT
+   ========================================= */
+main {
+  max-width: 900px;       /* page width */
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+section {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav .logo {
+  font-weight: bold;
+  color: var(--text);
+  margin-right: auto;     /* pushes the other links to the right */
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #ffffff;
+  border: 1px solid var(--accent);
+  padding: 9px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 9px 16px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--box-background);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+/* =========================================
+   SKILLS
+   ========================================= */
+.skill {
+  margin-bottom: 12px;
+}
+
+.bar {
+  background: var(--border);
+  height: 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.bar-fill {
+  background: var(--accent);
+  height: 100%;
+  border-radius: 4px;
+}
+
+.tags span {
+  display: inline-block;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin: 4px 6px 4px 0;
+}
+
+/* =========================================
+   PROJECTS
+   ========================================= */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter-button {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--box-background);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.card.hidden {
+  display: none;
+}
+
+/* =========================================
+   EXPERIENCE
+   ========================================= */
+.item {
+  margin-bottom: 20px;
+}
+
+.item p {
+  margin: 0 0 4px;
+}
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+.contact-form {
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 4px;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 9px;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+  text-align: center;
+  padding: 24px 16px;
+  color: var(--muted-text);
+  font-size: 14px;
+}
+
+.a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Achievements */
+#achievements .card h3 {
+  color: var(--accent);
+}
+/* Achievements */
+.certificate-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;       /* crops the image so all cards look equal */
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  display: block;
+}
